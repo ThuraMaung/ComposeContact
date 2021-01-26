@@ -20,13 +20,7 @@ private val LightColorPalette = lightColors(
     onPrimary = Color.Black,
 
     secondary = lightBlue500,
-    onSecondary = Color.White,
-//
-//    background = Color.White,
-//    onBackground = Color.Black,
-//    surface = Color.White,
-//    onSurface = Color.Black
-
+    onSecondary = Color.White
 )
 
 @Composable
@@ -34,7 +28,7 @@ fun ComposeContactTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
-    val colors = if (true) {
+    val colors = if (darkTheme) {
         DarkColorPalette
     } else {
         LightColorPalette
